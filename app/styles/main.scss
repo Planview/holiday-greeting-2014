@@ -41,21 +41,37 @@ body {
     repeat: no-repeat;
     position: center center;
   }
+  @media screen and (max-width: $screen-xs-max) {
+    display: block;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
 }
 
 .content {
   padding: {
-    top: 40px;
-    bottom: 20px;
+    top: 10px;
+    bottom: 10px;
   }
   background-color: #fff5e8;
   box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
-  @include border-top-radius(4px);
+  @media screen and (min-width: $screen-sm-min) {
+    @include border-top-radius(4px);
+    padding: {
+      top: 40px;
+      bottom: 20px;
+    }
+  }
 }
 
 .video-container {
-  padding: 40px 0;
+  padding: 10px 0;
   @include clearfix();
+  @media screen and (min-width: $screen-sm-min) {
+    padding: 40px 0;
+  }
 }
 
 .footer {
@@ -68,8 +84,11 @@ body {
 }
 
 .photo-row {
-  padding: 40px 0;
+  padding: 10px 0;
   @include make-row(10px);
+    @media screen and (min-width: $screen-sm-min) {
+    padding: 40px 0;
+  }
 }
 
 .thumb {
