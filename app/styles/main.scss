@@ -23,14 +23,20 @@ body {
 }
 .header {
   padding: {
-    top: 20px;
-    bottom: 20px;
+    top: 10px;
+    bottom: 10px;
+  }
+  @media screen and (min-width: $screen-sm-min) {
+    padding: {
+      top: 20px;
+      bottom: 20px;
+    }
   }
 }
 .pv-logo {
   $pv-logo-height: 269px;
   $pv-logo-width: 1163px;
-  $height: 50px;
+  $height: 35px;
 
   height: $height;
   width: $pv-logo-width * $height / $pv-logo-height;
@@ -47,6 +53,11 @@ body {
       left: auto;
       right: auto;
     }
+  }
+  @media screen and (min-width: $screen-sm-min) {
+    $height: 50px;
+    height: $height;
+    width: $pv-logo-width * $height / $pv-logo-height;
   }
 }
 
