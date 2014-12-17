@@ -194,7 +194,7 @@ module.exports = function (grunt) {
       app: {
         ignorePath: /^\/|\.\.\//,
         src: ['<%= config.app %>/index.html'],
-        exclude: ['bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js', 'bower_components/jquery/dist/jquery.js']
+        exclude: ['bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js', 'bower_components/jquery/dist/jquery.js', 'bower_components/respond/dest/*.js']
       },
       sass: {
         src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
@@ -338,6 +338,11 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '.',
           src: 'bower_components/background-size-polyfill/*.min.htc',
+          dest: '<%= config.dist %>'
+        }, {
+          expand: true,
+          cwd: '.',
+          src: 'bower_components/respond/dest/*.min.js',
           dest: '<%= config.dist %>'
         }, {
           expand: true,

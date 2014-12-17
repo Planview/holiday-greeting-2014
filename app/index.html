@@ -17,19 +17,19 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <style>
-      .bg-size {-ms-behavior: url('bower_components/background-size-polyfill/backgroundsize.min.htc');}
-    </style>
+    <!--[if lte IE 8]>
+      <script src="bower_components/respond/dest/respond.min.js"></script>
+      <style>
+        .bg-size {-ms-behavior: url('bower_components/background-size-polyfill/backgroundsize.min.htc');}
+      </style>
+    <![endif]-->
+
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
   </head>
   <body class="bg-size">
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
 
     <div class="container">
       <header class="header">
@@ -191,6 +191,7 @@
     <script src="bower_components/blueimp-gallery/js/blueimp-gallery-video.js"></script>
     <script src="bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
     <script src="bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
+    <script src="bower_components/respond/dest/respond.src.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
