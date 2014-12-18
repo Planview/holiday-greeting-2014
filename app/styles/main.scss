@@ -6,7 +6,7 @@ $font-family-sans-serif: 'Avenir W01', Arial, sans-serif;
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-body {
+.backgroundsize body {
   background: {
     image: url('../images/holiday-greeting-background.jpg');
     size: cover;

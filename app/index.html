@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/2efe21fa-d468-4c24-a867-67a8c2fb7004.css"/>
+    <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/2efe21fa-d468-4c24-a867-67a8c2fb7004.css"/>
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery.css" />
@@ -26,10 +26,11 @@
 
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/modernizr/feature-detects/css-backgroundsizecover.js"></script>
     <!-- endbuild -->
 
   </head>
-  <body class="bg-size">
+  <body>
 
     <div class="container">
       <header class="header">
@@ -39,7 +40,11 @@
       <main class="row content">
         <section class="video-container">
           <div class="col-sm-10 col-sm-offset-1">
-            <iframe width="560" height="315" src="//www.youtube.com/embed/_MC3XuMvsDI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+            <!--[if lte IE 8]>
+              <span class="LimelightEmbeddedPlayer"><script src="//video.limelight.com/player/embed.js"></script><object type="application/x-shockwave-flash" id="limelight_player_113779" name="limelight_player_113779" class="LimelightEmbeddedPlayerFlash" width="480" height="270" data="//video.limelight.com/player/loader.swf"><param name="movie" value="//video.limelight.com/player/loader.swf"/><param name="wmode" value="transparent"/><param name="allowScriptAccess" value="always"/><param name="allowFullScreen" value="true"/><param name="flashVars" value="playerForm=HoverPlayer&amp;mediaId=2c18a52440df48b68d0e80e1dd28125c"/></object><script>LimelightPlayerUtil.initEmbed('limelight_player_113779');</script></span>
+            <![endif]-->
+            <!--[if gt IE 8]><!--><iframe width="560" height="315" src="//www.youtube.com/embed/AvAL_Lo6lgM?rel=0&amp;showinfo=0&amp;controls=2&amp;wmode=opaque" frameborder="0" allowfullscreen></iframe><!--<![endif]-->
           </div>
         </section>
         <section class="photo-section">
@@ -172,7 +177,6 @@
     <script src="bower_components/blueimp-gallery/js/blueimp-gallery-video.js"></script>
     <script src="bower_components/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
     <script src="bower_components/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
-    <script src="bower_components/respond/dest/respond.src.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
